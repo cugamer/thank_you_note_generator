@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428153649) do
+ActiveRecord::Schema.define(version: 20160428204354) do
 
   create_table "letters", force: :cascade do |t|
     t.string   "applicant_name"
     t.string   "date"
     t.string   "job"
     t.string   "quality"
-    t.string   "salutation"
     t.string   "interviewer_name"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "salutation"
   end
 
 end

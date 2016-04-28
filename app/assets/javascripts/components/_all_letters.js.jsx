@@ -1,7 +1,6 @@
 var AllLetters = React.createClass({
 	componentDidMount() {
-		console.log("Component mounted");
-		$.getJSON('/api/letters/letters', (response) => { this.setState({ items: response}) });
+		$.getJSON('/api/v1/letters', (response) => { this.setState({ items: response}) });
 	},
 	getInitialState(){
 		return { items: [] };
