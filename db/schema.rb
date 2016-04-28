@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160428153649) do
     t.string   "date"
     t.string   "job"
     t.string   "quality"
-    t.string   "saluation"
+    t.string   "salutation"
     t.string   "interviewer_name"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
