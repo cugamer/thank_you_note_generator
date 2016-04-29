@@ -3,4 +3,4 @@ Thank You Note Generator
 
 This is a single page application which generates post interview thank you notes.  It's a MadLibs style app where you fill out the form, then hit the button and get a short, ready to go note to copy and paste.  This is the first react.js application I've built.
 
-App is deployed and can be used [here](https://sheltered-wave-20106.herokuapp.com/)
+App is deployed and can be viewed at https://sheltered-wave-20106.herokuapp.com
