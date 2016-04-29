@@ -5,12 +5,16 @@ class Api::V1::LettersController < Api::V1::BaseController
 
 	def create
 		newLetter = Letter.create(letter_params)
-		letter = "Dear #{newLetter.interviewer_name},\n\nIt was a pleasure to speak to you on #{newLetter.date} regarding the position of #{newLetter.job}.  As I mentioned in the interview I am very #{newLetter.quality} and I'm certian you'll agree that this makes me perfect for this position.  I look forward to hearing back from you soon regarding your decision.\n\n#{newLetter.salutation}\n\n#{newLetter.applicant_name}"
-		respond_with :api, :v1, :letter
-	end
-
-	def show
-	  respond_with Letter.find(params[:id])
+		letterGreeting = "Dear #{newLetter.interviewer_name}"
+		letterBody = "It was a pleasure to speak to you on #{newLetter.date} regarding the position of #{newLetter.job}.  As I mentioned in the interview I am very #{newLetter.quality} and I'm certain you'll agree that this makes me perfect for this position.  I look forward to hearing back from you soon regarding your decision."
+		letterSalutation = newLetter.salutation
+		letterName = newLetter.applicant_name
+		ActiveSupport.escape_html_entities_in_json = true 
+		render :json => {id: newLetter.id, 
+						letterGreeting: letterGreeting,
+						letterBody: letterBody,
+						letterSalutation: letterSalutation,
+						letterName: letterName}
 	end
 
 	private

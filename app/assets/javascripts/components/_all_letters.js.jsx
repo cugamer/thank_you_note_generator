@@ -3,18 +3,21 @@ var AllLetters = React.createClass({
 		letterData = this.props.letter;
 		console.log(letterData)
 		var letterMaker = function(letter){
+
 			return(
-				<div>
+				<div id={letter.id}>
 					<h3>Letter items</h3>
-					<p>{letter}</p>
+					{letter.letter}
 				</div>
 			)
 		};
 		if(letterData.length != 0){
-			markedUpLetterData = letterMaker(letterData);
 			return(
 				<div>
-					{markedUpLetterData}
+					<p>{letterData.letterGreeting}</p>
+					<p>{letterData.letterBody}</p>
+					<p>{letterData.letterSalutation}</p>
+					<p>{letterData.letterName}</p>
 				</div>
 			)
 		}else{
