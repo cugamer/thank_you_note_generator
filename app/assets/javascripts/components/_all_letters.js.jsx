@@ -1,12 +1,6 @@
 var AllLetters = React.createClass({
-	componentDidMount() {
-		$.getJSON('/api/v1/letters', (response) => { this.setState({ items: response}) });
-	},
-	getInitialState(){
-		return { items: [] };
-	},
 	render() {
-		var letters = this.state.items.map((letter) => {
+		var letters = this.props.letters.map((letter) => {
 			return(
 				<div key={letter.id}>
 					<h3>Letter items</h3>

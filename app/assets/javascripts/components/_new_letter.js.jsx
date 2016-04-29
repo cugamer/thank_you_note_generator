@@ -10,9 +10,15 @@ var NewLetter = React.createClass({
 		$.ajax({
             url: '/api/v1/letters',
             type: 'POST',
-            data: { letter: {applicant_name: applicant_name}},
+            data: { letter: {applicant_name: applicant_name,
+            				date: date,
+            				job: job,
+            				quality: quality,
+            				salutation: salutation,
+            				interviewer_name: interviewer_name
+            			}},
             success: (response) => {
-            	console.log(response);
+            	this.props.handleSubmit(response);
        		}
 		});
 	},
