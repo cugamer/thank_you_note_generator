@@ -1,6 +1,8 @@
 var AllLetters = React.createClass({
 	render() {
-		var letters = this.props.letters.map((letter) => {
+		letterData = this.props.letter;
+		console.log(letterData)
+		var letterMaker = function(letter){
 			return(
 				<div key={letter.id}>
 					<h3>Letter items</h3>
@@ -10,12 +12,16 @@ var AllLetters = React.createClass({
 					</ul>
 				</div>
 			)
-		});
-
-		return(
-			<div>
-				{letters}
-			</div>
-		)
+		};
+		if(letterData.length != 0){
+			markedUpLetterData = letterMaker(letterData);
+			return(
+				<div>
+					{markedUpLetterData}
+				</div>
+			)
+		}else{
+			return(<div></div>)
+		}
 	}
 });

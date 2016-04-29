@@ -1,19 +1,19 @@
 var LetterBody = React.createClass({
 	getInitialState(){
-		return { letters: [] };
+		return { letter: [] };
 	},
 	componentDidMount() {
-		$.getJSON('/api/v1/letters', (response) => { this.setState({ letters: response}) });
+		// $.getJSON('/api/v1/letters', (response) => { this.setState({ letters: response}) });
 	},
 	handleSubmit(response) {
-		var newState = this.state.letters.concat(response);
-		this.setState({letters: newState})
+		var newState = response;
+		this.setState({letter: newState});
 	},
 	render(){
 		return (
 			<div>
 				<NewLetter handleSubmit={this.handleSubmit} />
-				<AllLetters letters={this.state.letters} />
+				<AllLetters letter={this.state.letter} />
 			</div>
 		)
 	}
