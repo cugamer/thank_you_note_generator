@@ -6,7 +6,6 @@ var AllLetters = React.createClass({
 
 			return(
 				<div id={letter.id}>
-					<h3>Letter items</h3>
 					{letter.letter}
 				</div>
 			)

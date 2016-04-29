@@ -1,0 +1,31 @@
+html {
+	height: 100%;
+	background: rgb(135,224,253); /* Old browsers */
+	background: -moz-linear-gradient(-45deg, rgba(135,224,253,1) 0%, rgba(83,203,241,1) 40%, rgba(5,171,224,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+body {
+	max-width: 800px;
+	max-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.formInput {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

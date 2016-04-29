@@ -25,12 +25,12 @@ var NewLetter = React.createClass({
 	render() {
 		return(
 			<div>
-				<p class="form-input"><input ref='applicant_name' placeholder='Your Name' /> - Enter your name</p>
-				<p class="form-input"><input ref='date' placeholder='Interview Date' /> - Enter the date of your interview</p>
-				<p class="form-input"><input ref='job' placeholder='Job Title' /> - Enter the job title you interviewed for</p>
-				<p class="form-input"><input ref='quality' placeholder='Awesome' /> - Enter something about yourself that makes you awesome</p>
-				<p class="form-input"><input ref='salutation' placeholder='Salutation' /> - Enter your prefered salutation</p>
-				<p class="form-input"><input ref='interviewer_name' placeholder='Interviewers Name' /> - Enter the interviewers name</p>
+				<p className="formInput"><input ref='applicant_name' placeholder='Your Name' /> - Enter your name</p>
+				<p className="formInput"><input ref='date' placeholder='Interview Date' /> - Enter the date of your interview</p>
+				<p className="formInput"><input ref='job' placeholder='Job Title' /> - Enter the job title you interviewed for</p>
+				<p className="formInput"><input ref='quality' placeholder='Awesome' /> - Enter something about yourself that makes you awesome</p>
+				<p className="formInput"><input ref='salutation' placeholder='Salutation' /> - Enter your prefered salutation</p>
+				<p className="formInput"><input ref='interviewer_name' placeholder='Interviewers Name' /> - Enter the interviewers name</p>
 				
 				<button onClick={this.createLetterSubmit}>Create Letter</button>
 			</div>
