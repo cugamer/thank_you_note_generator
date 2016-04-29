@@ -4,11 +4,9 @@ class Api::V1::LettersController < Api::V1::BaseController
 	end
 
 	def create
-		letter = Letter.create(letter_params)
-		outputLetter = "Dear #{letter.interviewer_name},\n\nIt was a pleasure to speak to you on #{letter.date} regarding the position of #{letter.job}.  As I mentioned in the interview I am very #{letter.quality} and I'm certian you'll agree that this makes me perfect for this position.  I look forward to hearing back from you soon regarding your decision.\n\n#{letter.salutation}\n\n#{letter.applicant_name}"
-		p "-----------------------------------"
-		puts outputLetter
-		respond_with :api, :v1, letter
+		newLetter = Letter.create(letter_params)
+		letter = "Dear #{newLetter.interviewer_name},\n\nIt was a pleasure to speak to you on #{newLetter.date} regarding the position of #{newLetter.job}.  As I mentioned in the interview I am very #{newLetter.quality} and I'm certian you'll agree that this makes me perfect for this position.  I look forward to hearing back from you soon regarding your decision.\n\n#{newLetter.salutation}\n\n#{newLetter.applicant_name}"
+		respond_with :api, :v1, :letter
 	end
 
 	def show

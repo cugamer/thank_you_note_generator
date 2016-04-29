@@ -4,12 +4,9 @@ var AllLetters = React.createClass({
 		console.log(letterData)
 		var letterMaker = function(letter){
 			return(
-				<div key={letter.id}>
+				<div>
 					<h3>Letter items</h3>
-					<ul>
-						<li>{letter.applicant_name}</li>
-						<li>{letter.date}</li>
-					</ul>
+					<p>{letter}</p>
 				</div>
 			)
 		};
