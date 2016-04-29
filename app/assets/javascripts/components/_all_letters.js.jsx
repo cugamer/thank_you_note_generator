@@ -14,6 +14,7 @@ var AllLetters = React.createClass({
 		if(letterData.length != 0){
 			return(
 				<div>
+					<h3>Your letter has been sent:</h3>
 					<p>{letterData.letterGreeting}</p>
 					<p>{letterData.letterBody}</p>
 					<p>{letterData.letterSalutation}</p>
